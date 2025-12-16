@@ -1,0 +1,12 @@
+diff --git a/node_modules/@workflow/world-vercel/dist/utils.js b/node_modules/@workflow/world-vercel/dist/utils.js
+index 5df338c..024ac35 100644
+--- a/node_modules/@workflow/world-vercel/dist/utils.js
++++ b/node_modules/@workflow/world-vercel/dist/utils.js
+@@ -117,6 +117,7 @@ export async function makeRequest({ endpoint, options = {}, config = {}, schema,
+     const response = await fetch(url, {
+         ...options,
+         headers,
++        cache: 'no-store'
+     });
+     if (!response.ok) {
+         const errorData = (await response.json().catch(() => ({})));
