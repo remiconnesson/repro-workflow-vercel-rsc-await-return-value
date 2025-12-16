@@ -1,6 +1,9 @@
 import { start } from "workflow/api";
 import { testWorkflow } from "@/app/workflows/test-workflow";
 
+// can't do it during build has the await hangs
+export const dynamic = "force-dynamic";
+
 export default async function TestWorkflowPage() {
   console.log("[TestPage] 1. Starting");
   
