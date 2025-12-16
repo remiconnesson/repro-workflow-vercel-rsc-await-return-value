@@ -6,6 +6,7 @@ export const dynamic = "force-dynamic";
 
 // The issue might come from caching the fetch call in the render
 export const fetchCache = 'force-no-store'
+export const revalidate = 0;
 
 export default async function TestWorkflowPage() {
   console.log("[TestPage] 1. Starting");
