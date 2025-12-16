@@ -4,6 +4,9 @@ import { testWorkflow } from "@/app/workflows/test-workflow";
 // can't do it during build has the await hangs
 export const dynamic = "force-dynamic";
 
+// The issue might come from caching the fetch call in the render
+export const fetchCache = 'force-no-store'
+
 export default async function TestWorkflowPage() {
   console.log("[TestPage] 1. Starting");
   
